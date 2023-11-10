@@ -80,10 +80,6 @@ def get_bert_embedding(sentence):
 
 sentences_bert = [get_bert_embedding(sentence) for sentence in sentences]
 
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import classification_report, accuracy_score
-
 # Splitting the combined embeddings and labels into training and testing sets
 X_train_bert, X_test_bert, y_train_bert, y_test_bert = train_test_split(sentences_bert, labels, test_size=0.2, random_state=42)
 
