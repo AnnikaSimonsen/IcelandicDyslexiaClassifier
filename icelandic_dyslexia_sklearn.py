@@ -127,25 +127,10 @@ from sklearn.metrics import classification_report, accuracy_score, precision_sco
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 import numpy as np
 
-# # Splitting data into sentences, errors, and labels ## DATASET
+## Splitting data into sentences, errors, and labels ## DATASET
 sentences = [entry["sentence"] for entry in dataset]
 errors = [entry["errors"] for entry in dataset]
 labels = [1 if entry["writer"] == "atypical" else 0 for entry in dataset]
-
-# Splitting data into sentences, errors, and labels ### DATASET WITHOUT PUNCTUATION
-#sentences = [entry["sentence"] for entry in dataset_without_punctuation]
-#errors = [entry["errors"] for entry in dataset_without_punctuation]
-#labels = [1 if entry["writer"] == "atypical" else 0 for entry in dataset_without_punctuation]
-
-# Splitting data into sentences, errors, and labels ### CHILDREN
-#sentences = [entry["sentence"] for entry in dataset_children]
-#errors = [entry["errors"] for entry in dataset_children]
-#labels = [1 if entry["writer"] == "atypical" else 0 for entry in dataset_children]
-
-# Splitting data into sentences, errors, and labels ### CHILDREN WITHOUT PUNCTUATION
-#sentences = [entry["sentence"] for entry in dataset_children_without_punctuation]
-#errors = [entry["errors"] for entry in dataset_children_without_punctuation]
-#labels = [1 if entry["writer"] == "atypical" else 0 for entry in dataset_children_without_punctuation]
 
 # Splitting data into training and testing sets
 X_sentences_train, X_sentences_test, X_errors_train, X_errors_test, y_train, y_test = train_test_split(sentences, errors, labels, test_size=0.2, random_state=42, stratify=labels)
@@ -221,20 +206,9 @@ fig2.savefig('SVM_Typical_Dyslexic.png', dpi=100)
 
 #Splitting data into sentences, errors, and labels ### DATASET WITHOUT PUNCTUATION
 
-
 sentences = [entry["sentence"] for entry in dataset_without_punctuation]
 errors = [entry["errors"] for entry in dataset_without_punctuation]
 labels = [1 if entry["writer"] == "atypical" else 0 for entry in dataset_without_punctuation]
-
-# Splitting data into sentences, errors, and labels ### CHILDREN
-#sentences = [entry["sentence"] for entry in dataset_children]
-#errors = [entry["errors"] for entry in dataset_children]
-#labels = [1 if entry["writer"] == "atypical" else 0 for entry in dataset_children]
-
-# Splitting data into sentences, errors, and labels ### CHILDREN WITHOUT PUNCTUATION
-#sentences = [entry["sentence"] for entry in dataset_children_without_punctuation]
-#errors = [entry["errors"] for entry in dataset_children_without_punctuation]
-#labels = [1 if entry["writer"] == "atypical" else 0 for entry in dataset_children_without_punctuation]
 
 # Splitting data into training and testing sets
 X_sentences_train, X_sentences_test, X_errors_train, X_errors_test, y_train, y_test = train_test_split(sentences, errors, labels, test_size=0.2, random_state=42, stratify=labels)
@@ -312,11 +286,6 @@ fig4.savefig('SVM_Typical_Dyslexic_withoutPunctuation.png', dpi=100)
 sentences = [entry["sentence"] for entry in dataset_children]
 errors = [entry["errors"] for entry in dataset_children]
 labels = [1 if entry["writer"] == "atypical" else 0 for entry in dataset_children]
-
-# Splitting data into sentences, errors, and labels ### CHILDREN WITHOUT PUNCTUATION
-#sentences = [entry["sentence"] for entry in dataset_children_without_punctuation]
-#errors = [entry["errors"] for entry in dataset_children_without_punctuation]
-#labels = [1 if entry["writer"] == "atypical" else 0 for entry in dataset_children_without_punctuation]
 
 # Splitting data into training and testing sets
 X_sentences_train, X_sentences_test, X_errors_train, X_errors_test, y_train, y_test = train_test_split(sentences, errors, labels, test_size=0.2, random_state=42, stratify=labels)
