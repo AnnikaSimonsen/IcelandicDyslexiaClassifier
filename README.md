@@ -6,7 +6,7 @@ The following code uses Scitkit-learn to train a logistic regression model and a
 | Corpus    | Total Sentences | Correct Sentences | Incorrect Sentences | % Sentences with Errors |
 |-----------|-----------------|-------------------|---------------------|-------------------------|
 | Dyslexia  | 1838            | 284               | 1555                | 84.6%                   |
-| General   | 7981            | 5102              | 2880                | 36.1%                   |
+| General (Essays only)   | 7981            | 5102              | 2880                | 36.1%                   |
 | Children  | 2070            | 413               | 1658                | 80.1%                   |
 
 
